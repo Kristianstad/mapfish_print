@@ -1,0 +1,10 @@
+# Set in stage2:
+# ---------------------------------------------------------
+# set -ef +am
+# isFirstRun
+# VAR_*
+# All functions in /start/functions
+
+cd "$VAR_MAPFISH_CONFIG_DIR"
+find * -type d -exec mkdir -p "/webapps-nobind/print-servlet/{}" \;
+find * -type f -exec ln -sf "$VAR_MAPFISH_CONFIG_DIR/{}" "/webapps-nobind/print-servlet/{}" \;
