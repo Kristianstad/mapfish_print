@@ -10,6 +10,7 @@ ARG IMAGETYPE="application"
 ARG TOMCAT_VERSION="dev"
 ARG BASEIMAGE="huggla/sam-tomcat:$TOMCAT_VERSION"
 ARG DESTDIR="/webapps-nobind/print-servlet"
+ARG BUILDDEPS="openjdk8"
 ARG RUNDEPS="ghostscript"
 ARG EXECUTABLES="/usr/bin/gs"
 ARG BUILDCMDS=\
