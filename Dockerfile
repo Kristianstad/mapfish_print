@@ -39,6 +39,8 @@ COPY --from=build /finalfs /
 # =========================================================================
 # Final
 # =========================================================================
+ENV VAR_MAPFISH_CONFIG_DIR="/etc/mapfish"
+
 # Generic template (don't edit) <BEGIN>
 USER starter
 ONBUILD USER root
