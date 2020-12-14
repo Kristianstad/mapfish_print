@@ -7,7 +7,7 @@
 # ARGs (can be passed to Build/Final) <BEGIN>
 ARG SaM_VERSION="2.0.4"
 ARG IMAGETYPE="application"
-ARG TOMCAT_VERSION="dev"
+ARG TOMCAT_VERSION="9.0.41"
 ARG BASEIMAGE="huggla/sam-tomcat:$TOMCAT_VERSION"
 ARG DESTDIR="/webapps-nobind/print-servlet"
 ARG BUILDDEPS="openjdk8"
