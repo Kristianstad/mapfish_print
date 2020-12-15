@@ -5,14 +5,14 @@
 # VAR_*
 # All functions in /start/functions
 
-if [ "$isFirstRun" == "true" ]
-then
-   replaceFileWithLink "/webapps-nobind/print-servlet/config.yaml" "$VAR_MAPFISH_CONFIG_DIR/config.yaml"
-   replaceFileWithLink "/webapps-nobind/print-servlet/export.yaml" "$VAR_MAPFISH_CONFIG_DIR/export.yaml"
-   replaceFileWithLink "/webapps-nobind/print-servlet/header.yaml" "$VAR_MAPFISH_CONFIG_DIR/header.yaml"
-   replaceFileWithLink "/webapps-nobind/print-servlet/print.yaml" "$VAR_MAPFISH_CONFIG_DIR/print.yaml"
-   replaceFileWithLink "/webapps-nobind/print-servlet/report.yaml" "$VAR_MAPFISH_CONFIG_DIR/report.yaml"
-fi
-cd "$VAR_MAPFISH_CONFIG_DIR"
-find * -type d -exec mkdir -p "/webapps-nobind/print-servlet/{}" \;
-find * -type f -exec ln -sf "$VAR_MAPFISH_CONFIG_DIR/{}" "/webapps-nobind/print-servlet/{}" \;
+#if [ "$isFirstRun" == "true" ]
+#then
+#   replaceFileWithLink "/webapps-nobind/print-servlet/config.yaml" "$VAR_MAPFISH_CONFIG_DIR/config.yaml"
+#   replaceFileWithLink "/webapps-nobind/print-servlet/export.yaml" "$VAR_MAPFISH_CONFIG_DIR/export.yaml"
+#   replaceFileWithLink "/webapps-nobind/print-servlet/header.yaml" "$VAR_MAPFISH_CONFIG_DIR/header.yaml"
+#   replaceFileWithLink "/webapps-nobind/print-servlet/print.yaml" "$VAR_MAPFISH_CONFIG_DIR/print.yaml"
+#   replaceFileWithLink "/webapps-nobind/print-servlet/report.yaml" "$VAR_MAPFISH_CONFIG_DIR/report.yaml"
+#fi
+#cd "$VAR_MAPFISH_CONFIG_DIR"
+#find * -type d -exec mkdir -p "/webapps-nobind/print-servlet/{}" \;
+#find * -type f -exec ln -sf "$VAR_MAPFISH_CONFIG_DIR/{}" "/webapps-nobind/print-servlet/{}" \;
