@@ -13,7 +13,7 @@ ARG DESTDIR="/webapps-nobind/print-servlet"
 ARG BUILDDEPS="openjdk8"
 ARG RUNDEPS="ghostscript freetype ttf-font-awesome"
 ARG EXECUTABLES="/usr/bin/gs"
-ARG DOWNLOADS="https://iweb.dl.sourceforge.net/project/geoserver/GeoServer/$GEOSERVER_VERSION/geoserver-$GEOSERVER_VERSION-war.zip https://iweb.dl.sourceforge.net/project/geoserver/GeoServer/$GEOSERVER_VERSION/extensions/geoserver-$GEOSERVER_VERSION-libjpeg-turbo-plugin.zip https://download.java.net/media/jai/builds/release/1_1_3/jai-1_1_3-lib-linux-amd64.tar.gz https://download.java.net/media/jai-imageio/builds/release/1.1/jai_imageio-1_1-lib-linux-amd64.tar.gz"
+ARG DOWNLOADS="https://download.java.net/media/jai/builds/release/1_1_3/jai-1_1_3-lib-linux-amd64.tar.gz https://download.java.net/media/jai-imageio/builds/release/1.1/jai_imageio-1_1-lib-linux-amd64.tar.gz"
 ARG BUILDCMDS=\
 '   cd $DESTDIR '\
 '&& /usr/lib/jvm/java-1.8-openjdk/bin/jar xf /print-servlet.war '\
