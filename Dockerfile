@@ -11,8 +11,6 @@ ARG TOMCAT_VERSION="dev"
 ARG BASEIMAGE="huggla/sam-tomcat:$TOMCAT_VERSION"
 ARG DESTDIR="/webapps-nobind/print-servlet"
 ARG BUILDDEPS="openjdk8 fontconfig msttcorefonts-installer"
-ARG RUNDEPS="ghostscript"
-ARG EXECUTABLES="/usr/bin/gs"
 ARG BUILDCMDS=\
 '   cd $DESTDIR '\
 '&& /usr/lib/jvm/java-1.8-openjdk/bin/jar xf /print-servlet.war '\
