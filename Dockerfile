@@ -10,12 +10,16 @@ ARG IMAGETYPE="application"
 ARG TOMCAT_VERSION="dev"
 ARG BASEIMAGE="huggla/sam-tomcat:$TOMCAT_VERSION"
 ARG DESTDIR="/webapps-nobind/print-servlet"
-ARG BUILDDEPS="openjdk8"
-ARG RUNDEPS="ghostscript freetype ttf-font-awesome"
+ARG BUILDDEPS="openjdk8 fontconfig msttcorefonts-installer"
+ARG RUNDEPS="ghostscript"
 ARG EXECUTABLES="/usr/bin/gs"
 ARG BUILDCMDS=\
 '   cd $DESTDIR '\
-'&& /usr/lib/jvm/java-1.8-openjdk/bin/jar xf /print-servlet.war'
+'&& /usr/lib/jvm/java-1.8-openjdk/bin/jar xf /print-servlet.war '\
+'&& update-ms-fonts '\
+'&& fc-cache -f '\
+'&& cp -a /etc/fonts /finalfs/etc/ '\
+'&& cp -a /usr/share/xml /usr/share/font* /finalfs/usr/share/'
 # ARGs (can be passed to Build/Final) </END>
 
 # Generic template (don't edit) <BEGIN>
