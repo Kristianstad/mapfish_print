@@ -8,5 +8,5 @@
 cd "$VAR_MAPFISH_CONFIG_DIR"
 set +e
 find * -type d -exec mkdir -p "/webapps-nobind/print-servlet/{}" \;
-find * -type f -exec cp -a "$VAR_MAPFISH_CONFIG_DIR/{}" "/webapps-nobind/print-servlet/{}" \;
+find * -type f -exec cp "$VAR_MAPFISH_CONFIG_DIR/{}" "/webapps-nobind/print-servlet/{}" \;
 set -e
