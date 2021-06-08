@@ -7,7 +7,7 @@
 # ARGs (can be passed to Build/Final) <BEGIN>
 ARG SaM_VERSION="2.0.5"
 ARG IMAGETYPE="application"
-ARG TOMCAT_VERSION="dev"
+ARG TOMCAT_VERSION="8.0.53"
 ARG BASEIMAGE="huggla/sam-tomcat:$TOMCAT_VERSION"
 ARG DESTDIR="/webapps-nobind/print-servlet"
 ARG BUILDDEPS="openjdk8 fontconfig msttcorefonts-installer"
