@@ -11,6 +11,7 @@ ARG TOMCAT_VERSION="8.0.53-20220822"
 ARG BASEIMAGE="huggla/sam-tomcat:$TOMCAT_VERSION"
 ARG DESTDIR="/webapps-nobind/print-servlet"
 ARG BUILDDEPS="openjdk8 fontconfig msttcorefonts-installer"
+ARG MAKEDIRS="/usr/share"
 ARG BUILDCMDS=\
 '   cd $DESTDIR '\
 '&& /usr/lib/jvm/java-1.8-openjdk/bin/jar xf /print-servlet.war '\
