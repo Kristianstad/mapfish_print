@@ -6,13 +6,14 @@ ARG SaM_REPO=${SaM_REPO:-ghcr.io/kristianstad/secure_and_minimal}
 ARG ALPINE_VERSION=${ALPINE_VERSION:-3.17}
 ARG IMAGETYPE="application"
 ARG TOMCAT_VERSION="8.0"
+ARG OPENJDK_VERSION="17"
 ARG BASEIMAGE="ghcr.io/kristianstad/tomcat:$TOMCAT_VERSION"
 ARG DESTDIR="/webapps-nobind/print-servlet"
-ARG BUILDDEPS="openjdk17-jdk fontconfig msttcorefonts-installer"
+ARG BUILDDEPS="openjdk$OPENJDK_VERSION-jdk fontconfig msttcorefonts-installer"
 ARG MAKEDIRS="/usr/share"
 ARG BUILDCMDS=\
 '   cd $DESTDIR '\
-'&& /usr/lib/jvm/java-17-openjdk/bin/jar xf /print-servlet.war '\
+'&& /usr/lib/jvm/java-$OPENJDK_VERSION-openjdk/bin/jar xf /print-servlet.war '\
 '&& update-ms-fonts '\
 '&& fc-cache -f '\
 '&& cp -a /etc/fonts /finalfs/etc/ '\
