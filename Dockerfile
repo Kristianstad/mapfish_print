@@ -13,7 +13,7 @@ ARG BUILDDEPS="openjdk$OPENJDK_VERSION-jdk fontconfig msttcorefonts-installer"
 ARG MAKEDIRS="/usr/share"
 ARG BUILDCMDS=\
 '   cd $DESTDIR '\
-'&& /usr/lib/jvm/java-$OPENJDK_VERSION-openjdk/bin/jar xf /print-servlet.war '\
+"&& /usr/lib/jvm/java-$OPENJDK_VERSION-openjdk/bin/jar xf /print-servlet.war "\
 '&& update-ms-fonts '\
 '&& fc-cache -f '\
 '&& cp -a /etc/fonts /finalfs/etc/ '\
